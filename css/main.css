@@ -57,11 +57,12 @@
   background-color: #37BC9B; }
 
 html {
-  scroll-behavior: smooth; }
-
+  scroll-behavior: smooth;
+ }
 .site-title {
-  font-size: 1.25rem;
-  line-height: 2.5rem; }
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+color: #E6E9ED; }
 
 .nav-link {
   padding: 0;
@@ -113,10 +114,9 @@ footer a:not(.nav-link) {
 
 @media print {
   body {
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent) 85px 85px, linear-gradient(#000000 6.800000000000001px, transparent 6.800000000000001px) 0 -3.4000000000000004px, linear-gradient(90deg, #000000 6.800000000000001px, #e5e5f7 6.800000000000001px) -3.4000000000000004px 0;
-    background-size: 170px 170px, 170px 170px, 85px 85px, 85px 85px; }
+    overflow: hidden;
+    margin: 0; 
+  }
   .container {
     width: auto;
     max-width: 100%;
@@ -140,3 +140,10 @@ footer a:not(.nav-link) {
   .page-break {
     padding-top: 5rem;
     page-break-before: always; } }
+
+  canvas{
+      position:absolute;
+      left:0;
+      top:0;
+      z-index:-1;
+   }
