@@ -68,7 +68,7 @@ color: #E6E9ED; }
   padding: 0;
   font-size: 1.25rem;
   line-height: 2.5rem;
-  color: rgba(0, 0, 0, 0.5); }
+  color: white; }
 
 .nav-link:hover,
 .nav-link:focus,
