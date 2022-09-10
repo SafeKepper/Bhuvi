@@ -5,6 +5,11 @@ AOS.init({
 });
 
 // Add your javascript here
+window.onresize = function(){ location.reload(); }
+let HEIGHT = 2600
+let WIDTH = 3000
+
+// Canvas background
 let w, h;
 const ctx = canvas.getContext("2d");
 const { sin, cos, PI, hypot, min, max } = Math;
@@ -15,8 +20,8 @@ function spawn() {
     
     const pts = many(333, () => {
         return {
-            x: rnd(innerWidth),
-            y: rnd(innerHeight),
+            x: rnd(WIDTH),
+            y: rnd(HEIGHT),
             len: 0,
             r: 0
         };
@@ -30,14 +35,14 @@ function spawn() {
     });
     
     let seed = rnd(100)
-    let tx = rnd(innerWidth); 
-    let ty = rnd(innerHeight);
-    let x = rnd(innerWidth)
-    let y = rnd(innerHeight)
+    let tx = rnd(WIDTH); 
+    let ty = rnd(HEIGHT);
+    let x = rnd(WIDTH)
+    let y = rnd(HEIGHT)
     let kx = rnd(0.5, 0.5)
     let ky = rnd(0.5, 0.5)
     let walkRadius = pt(rnd(50,50), rnd(50,50))
-   let r = innerWidth / rnd(100, 150);
+   let r = WIDTH / rnd(100, 150);
     
     function paintPt(pt){
         pts2.forEach((pt2) => {
@@ -66,17 +71,17 @@ function spawn() {
     let fx = tx + selfMoveX;         
     let fy = ty + selfMoveY; 
             
-    x += min(innerWidth/100, (fx - x)/10)
-    y += min(innerWidth/100, (fy - y)/10)
+    x += min(WIDTH/100, (fx - x)/10)
+    y += min(WIDTH/100, (fy - y)/10)
             
     let i = 0
     pts.forEach((pt) => {
         const dx = pt.x - x,
             dy = pt.y - y;
         const len = hypot(dx, dy);
-        let r = min(2, innerWidth / len / 5);
+        let r = min(2, WIDTH / len / 5);
         pt.t = 0;
-        const increasing = len < innerWidth / 10 
+        const increasing = len < WIDTH / 10 
             && (i++) < 8;
         let dir = increasing ? 0.1 : -0.1;
         if (increasing) {
@@ -102,9 +107,9 @@ addEventListener("pointermove", (e) => {
 });
 
 requestAnimationFrame(function anim(t) {
-    if (w !== innerWidth) w = canvas.width = innerWidth;
-    if (h !== innerHeight) h = canvas.height = innerHeight;
-    ctx.fillStyle = "#000";
+    if (w !== WIDTH) w = canvas.width = WIDTH;
+    if (h !== HEIGHT) h = canvas.height = HEIGHT;
+    ctx.fillStyle = "#01012b";
     drawCircle(0, 0, w * 10);
     ctx.fillStyle = ctx.strokeStyle = "#fff";
     t/=1000
