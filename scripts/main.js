@@ -5,8 +5,11 @@ AOS.init({
 });
 
 // Add your javascript here
-let HEIGHT = 2600
-let WIDTH = 3000
+window.onresize = function(){ 
+    location.reload();
+    spawn(); }
+let HEIGHT = window.innerHeight
+let WIDTH = window.innerWidth
 
 // Canvas background
 let w, h;
