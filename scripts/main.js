@@ -11,6 +11,7 @@ let WIDTH = 3000
 // Canvas background
 let w, h;
 const ctx = canvas.getContext("2d");
+
 const { sin, cos, PI, hypot, min, max } = Math;
 
 
@@ -108,6 +109,7 @@ addEventListener("pointermove", (e) => {
 requestAnimationFrame(function anim(t) {
     if (w !== WIDTH) w = canvas.width = WIDTH;
     if (h !== HEIGHT) h = canvas.height = HEIGHT;
+    ctx.globalAlpha = 0.4;
     ctx.fillStyle = "#01012b";
     drawCircle(0, 0, w * 10);
     ctx.fillStyle = ctx.strokeStyle = "#fff";
