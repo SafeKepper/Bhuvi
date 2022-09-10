@@ -242,6 +242,9 @@ footer a:not(.nav-link) {
   border-radius: 25px;
 }
 
+body {
+  background-color: #01012B;
+}
 #st-cur {
   font-family: "Orbitron", courier, sans-serif;
 }
