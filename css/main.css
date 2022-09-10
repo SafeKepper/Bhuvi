@@ -1,6 +1,8 @@
 /* Buttons */
 /* Inputs */
 /* Timeline custom component */
+@import url(https://fonts.googleapis.com/css?family=Orbitron);
+
 .timeline {
   border-left: 2px solid #E6E9ED;
   padding: 1rem 0; }
@@ -61,6 +63,7 @@ html {
   overflow-x: hidden;
  }
 .na-me {
+  font-family: "Orbitron", courier, sans-serif;
   font-size: 2.2rem;
   animation: flicker 1.5s infinite alternate;  }
 
@@ -237,4 +240,82 @@ footer a:not(.nav-link) {
 
 .exc-name {
   border-radius: 25px;
+}
+
+#st-cur{
+  font-family: "Orbitron", courier, sans-serif;
+}
+.glow {
+  font-family: "Orbitron", courier, sans-serif;
+  text-align: center;
+  color: rgba(255, 255, 255, 1.8);
+  text-shadow: 0 0 1px rgba(157, 208, 154, 0.3);
+  /* Stripes */
+  /*Fallback:
+  http://nimbupani.com/using-background-clip-for-text-with-css-fallback.html
+  */
+  background: -webkit-linear-gradient(transparent, transparent), url(https://i.imgur.com/WyMyxQ6.png) repeat;
+  /* clipping webkit magic */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Animation */
+  -webkit-animation: glow 3s infinite alternate;
+  -moz-animation: glow 3s infinite alternate;
+  animation: glow 3s infinite alternate;
+  -webkit-animation-timing-function: cubic-bezier(1, 0.3, 0.79, 0.81);
+  -moz-animation-timing-function: cubic-bezier(1, 0.3, 0.79, 0.81);
+  animation-timing-function: cubic-bezier(1, 0.3, 0.79, 0.81);
+}
+
+@-webkit-keyframes glow {
+  0% {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1), 0 0 3px rgba(255, 255, 255, 0.1), 0 0 5px rgba(157, 208, 154, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  52% {
+    text-shadow: 0 0 5px rgba(157, 208, 154, 0.3);
+  }
+  54% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(157, 208, 154, 0.3);
+  }
+}
+@-moz-keyframes glow {
+  0% {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1), 0 0 3px rgba(255, 255, 255, 0.1), 0 0 5px rgba(157, 208, 154, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  52% {
+    text-shadow: 0 0 5px rgba(157, 208, 154, 0.3);
+  }
+  54% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(157, 208, 154, 0.3);
+  }
+}
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.1), 0 0 3px rgba(255, 255, 255, 0.1), 0 0 5px rgba(157, 208, 154, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  52% {
+    text-shadow: 0 0 5px rgba(157, 208, 154, 0.3);
+  }
+  54% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1), 0 0 10px rgba(157, 208, 154, 0.3);
+  }
 }

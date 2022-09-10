@@ -5,7 +5,6 @@ AOS.init({
 });
 
 // Add your javascript here
-window.onresize = function(){ location.reload(); }
 let HEIGHT = 2600
 let WIDTH = 3000
 
