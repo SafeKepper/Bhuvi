@@ -5,13 +5,6 @@ AOS.init({
 });
 
 // Add your javascript here
-if(!(/iPhone|iPad|iPod|Android|webOS|BlackBerry|Opera Mini|IEMobile/i.test(navigator.userAgent) )) {
-
-    }else {
-        window.onresize = function(){ 
-            location.reload();
-            spawn(); }
-    } 
 
 let HEIGHT = window.innerHeight
 let WIDTH = window.innerWidth
